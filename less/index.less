@@ -152,29 +152,6 @@ body{
 	// }
 }
 
-
-.container{
-// border: 1px solid red !important;
-
-width: 80%;
-margin: 3rem auto;
-display: flex;
-flex-flow: row nowrap;
-font-size: 1.6rem;
-
-	@media (max-width: 500px){
-		flex-flow: column-reverse nowrap;
-		margin: 2rem auto;
-		width: 90%;
-	}
-
-	@media (max-width: 800px){
-		margin: 2rem auto;
-		width: 90%;
-	}
-}
-
-
 .top(){
 	height: 200px;
 	padding-bottom: 10%;
@@ -184,128 +161,165 @@ font-size: 1.6rem;
 	}
 }
 
-
-
-
-.sideBar{
-// border: 1px solid blue !important;
-width: 25%;
-padding: 3% 3%;
-background-color: @mainColor;
-color: @subColor;
-display: flex;
-flex-flow: column nowrap;
-
-@media (max-width: 500px){
-	width: 100%;
+.center(){
+	text-align: center;
 }
 
-a{		
-	color: @subColor;
-	font-family: @pFont;
-	text-decoration: none;
-}
+.container{
+// border: 1px solid red !important;
 
-
-
-.sideTop{
-	// border: 1px solid red !important;
+	width: 80%;
+	margin: 3rem auto;
 	display: flex;
-	justify-content: center;
-	
-	.top();	
-	
-	
-	
-	.contact{
-			width: 100%;
-			display: flex;
-			flex-flow: column nowrap;
-			align-items: flex-start;
-
-			@media (max-width: 500px){
-				align-items: center;
-			}
-		}
-}
-}
-
-
-
-.content{
-	// border: 1px solid blue !important;
-	width: 75%;
-	padding: 3% 3%;
-	background-color: @subColor;
-	color: @mainColor;
-	display: flex;
-	flex-flow: column nowrap;
-
-	@media (max-width: 500px){
-		width: 100%;
-	}
-
-	a{
-		color: @mainColor;
-		font-family: @pFont;
-		text-decoration: none;
+	flex-flow: row nowrap;
+	font-size: 1.6rem;
 
 		@media (max-width: 500px){
-			font-size: 1.2rem;
+			flex-flow: column-reverse nowrap;
+			margin: 2rem auto;
+			width: 90%;
 		}
-	}
 
-	a:hover{
-		color: @subColor;
+		@media (max-width: 800px){
+			margin: 2rem auto;
+			width: 90%;
+		}
+		
+		
+	.sideBar{
+		// border: 1px solid blue !important;
+		width: 25%;
+		padding: 3% 3%;
 		background-color: @mainColor;
-		font-family: @pFont;
+		color: @subColor;
+		display: flex;
+		flex-flow: column nowrap;
+
+		@media (max-width: 500px){
+			width: 100%;
+			.center();
+		}
+
+		a{		
+			color: @subColor;
+			font-family: @pFont;
+			text-decoration: none;
+		}
+		a:hover{
+			color: @mainColor;
+			background-color: @subColor;
+			font-family: @pFont;
+		}
+
+	
 	}
 
-	.contentTop{
+	
+
+
+
+	.sideTop{
 		// border: 1px solid red !important;
 		display: flex;
-		flex-flow: column nowrap;
-		justify-content: flex-start;
-		align-items: center;
+		justify-content: center;
 
 		
-		.top();
-
-
-		.navContainer{
-			// border: 1px solid blue !important;
-			width: 100%;
-			display: flex;
-			justify-content: center;
-
-			
-
-			nav{
-				display: flex;
+		.top();	
+		
+		
+		
+		.contact{
 				width: 100%;
-				justify-content: space-around;
-			}
-		}
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: flex-start;
 
-			
+				@media (max-width: 500px){
+					align-items: center;
+				}
+		}
 		
 	}
 
-	.mainContent{
+		
+}
+
+
+
+	.content{
+		// border: 1px solid blue !important;
+		width: 75%;
+		padding: 3% 3%;
+		background-color: @subColor;
+		color: @mainColor;
 		display: flex;
 		flex-flow: column nowrap;
 
-		.skillsAndHobbies{
-			display: flex;
-			flex-flow: row wrap;
+		@media (max-width: 500px){
+			width: 100%;
+		}
 
-			#skills, #hobbies{
-				width: 50%;
+		a{
+			color: @mainColor;
+			font-family: @pFont;
+			text-decoration: none;
+
+			@media (max-width: 500px){
+				font-size: 1.2rem;
+			}
+		}
+
+		a:hover{
+			color: @subColor;
+			background-color: @mainColor;
+			font-family: @pFont;
+		}
+
+		.contentTop{
+			// border: 1px solid red !important;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: center;
+
+			
+			.top();
+
+
+			.navContainer{
+				// border: 1px solid blue !important;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+
+				
+
+				nav{
+					display: flex;
+					width: 100%;
+					justify-content: space-around;
+				}
+			}
+
+				
+			
+		}
+
+		.mainContent{
+			display: flex;
+			flex-flow: column nowrap;
+
+			.skillsAndHobbies{
+				display: flex;
+				flex-flow: row wrap;
+
+				#skills, #hobbies{
+					width: 50%;
+				}
 			}
 		}
 	}
 
-}
 
 .divIcons{
 display: flex;
