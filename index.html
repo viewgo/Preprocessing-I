@@ -19,62 +19,42 @@
     <div class="container">
 
       <header>
-
-        <div class=navContainer>
-          <nav>
-          <a href="#">Work Experience</a>
-          <a href="#">Education</a>
-          <a href="#">Skills</a>
-          <a href="#">Hobbies</a>
-          </nav>
-        </div>
-
-        <div class="headerContent">
-          <div class="headerPic">
-            <img class="profilePic" src="img/profile.jpg">
-          </div>
-
-          <div class="personalInfo">
-            <div class="name">
-              <h1>Hugo Oliveira</h1>
-            </div>
-
-            <div class="headerContact">
-              <p>Address</p>
-              <p>Phone Number</p>
-              <p>Email</p>
-              <p>Website</p>
-            </div>
-            
-            
-          </div>
-        </div>
-        
-
       </header>
 
-      
+      <section class="sideBar">
 
-      <section class="content">
+        <div class="sideTop">
 
-        <div class="sideContent">
+          <div class="contact">
+            <p><i class="fas fa-map-marker-alt"></i> Address</p>
+            <p><i class="fas fa-phone-square"></i> Phone Number</p>
+            <p><i class="fas fa-envelope-square"></i> Email</p>
+            <p><i class="far fa-window-maximize"></i> Website</p>
+          </div>
+        </div>
+
+        <div class="sideBottom">
           <div>
             <h2>About Me</h2>
             <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officia est saepe nostrum consectetur repudiandae! Consectetur voluptate unde iusto maiores! Iusto assumenda sequi earum consequatur obcaecati fugiat iste mollitia quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
+              officia est saepe nostrum consectetur repudiandae! Consectetur
+              voluptate unde iusto maiores! Iusto assumenda sequi earum
+              consequatur obcaecati fugiat iste mollitia quod.</p>
             <br><hr><br>
           </div>
 
           <div>
             <h2>Follow Me</h2>
             <br>
-            <p><i class="fab fa-facebook-square"></i> Hugo Oliveira</p>
+            <div class="divIcons">
+              <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+              <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+              <a href="#"><i class="fab fa-github-square fa-2x"></i></a>
+            </div>
 
-            <p><i class="fab fa-instagram"></i> Hugo Oliveira</p>
 
-            <p><i class="fab fa-twitter-square"></i> Hugo Oliveira</p>
-            
-            
             <br><hr><br>
           </div>
 
@@ -82,13 +62,17 @@
             <h2>References</h2>
             <br>
             <h4>John Smith</h4>
-            <p>T: (818) 938-3874</p>
-            <p>E: johnsmith@johnsmith.com</p>
+            <div class="divIcons">
+                <i class="fas fa-phone-square fa-2x" title="(816) 390-4056"></i>
+                <a href="#"><i class="fas fa-envelope-square fa-2x"></i></a>
+            </div>
 
             <br>
             <h4>Paul Blart</h4>
-            <p>T: (818) 382-9583</p>
-            <p>E: paulblart@mallcop.com</p>
+            <div class="divIcons">
+                <i class="fas fa-phone-square fa-2x" title="(816) 129-3821"></i>
+                <a href="#"><i class="fas fa-envelope-square fa-2x"></i></a>
+            </div>
 
             <br><hr><br>
           </div>
@@ -99,23 +83,52 @@
             <p>English</p>
             <p>Portuguese</p>
           </div>
+        </div>
+
+      </section>
+
+
+
+      <section class="content">
+
+        <div class="contentTop">
+
+
+
+
+          <div class="name">
+            <h1>Hugo Oliveira</h1>
+            <br>
+          </div>
+
+          <div class=navContainer>
+            <nav>
+              <a href="#work">Work Experience</a>
+              <a href="#education">Education</a>
+              <a href="#skills">Skills</a>
+              <a href="#hobbies">Hobbies</a>
+            </nav>
+          </div>
+
 
         </div>
 
+
+
         <div class="mainContent">
-          <div>
+          <div id="work">
             <h2>Work Experience</h2>
             <br>
 
-            <h3>Workplace</h3>
+            <h3>Job #1</h3>
             <br>
 
-            <h3>Workplace</h3>
+            <h3>Job #2</h3>
 
             <br><hr><br>
           </div>
 
-          <div>
+          <div id="education">
             <h2>Education</h2>
             <br>
 
@@ -127,9 +140,9 @@
             <br><hr><br>
           </div>
 
-          <div>
-            <h2>Skills</h2>   
-            <br>       
+          <div id="skills">
+            <h2>Skills</h2>
+            <br>
             <p>1</p>
             <p>2</p>
             <p>3</p>
@@ -137,14 +150,14 @@
             <br><hr><br>
           </div>
 
-          <div>
-              <h2>Hobbies</h2>   
-              <br>       
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-            </div>
+          <div id="hobbies">
+            <h2>Hobbies</h2>
+            <br>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+          </div>
 
         </div>
 

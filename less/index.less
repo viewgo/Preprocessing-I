@@ -1,7 +1,7 @@
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -17,45 +17,45 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+display: block;
 }
 body {
-	line-height: 1;
+line-height: 1;
 }
 ol, ul {
-	list-style: none;
+list-style: none;
 }
 blockquote, q {
-	quotes: none;
+quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+content: '';
+content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+border-collapse: collapse;
+border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-	box-sizing: border-box;
-	// border: 1px dotted red !important;
+box-sizing: border-box;
+// border: 1px dotted red !important;
 }
 
 html, body {
-    height: 100%;
+height: 100%;
 }
 
 
@@ -70,171 +70,182 @@ html, body {
 
 
 html{
-	font-size: 62.5%;
-	
+font-size: 62.5%;
 
-	hr{
-		width: 100%;
-		overflow: visible; /* For IE */
-		padding: 0;
-	}
+
+hr{
+	width: 100%;
+	overflow: visible; /* For IE */
+	padding: 0;
+}
+
 	
-		
 }
 
 body{
-	background-color: white;
+background-color: white;
 
-	line-height: 1.5;
+line-height: 1.5;
 
-	h1,h2,h3,h4,h5,h6{
-		font-family: @headerFont;
-	}
+h1,h2,h3,h4,h5,h6{
+	font-family: @headerFont;
+}
 
-	p{
-		font-family: @pFont;
-		font-size: 1.6rem;
-	}
-
-	h1{
-		font-size: 5rem;
-	}
-	h2{
-		font-size: 2.5rem;
-	}
-	h3{
-		font-size: 2rem;
-	}
-	h4{
-		font-size: 1.6rem;
-	}
+p{
+	font-family: @pFont;
+	font-size: 1.6rem;
+}
 
 
-	
-	@media (max-width: 768px){
-		background-color: lightblue ;
-	}
-	
 
-	@media (max-width: 500px){
-		background-color: lightseagreen;
-	}
+h1{
+	font-size: 5rem;
+}
+h2{
+	font-size: 2.5rem;
+}
+h3{
+	font-size: 2rem;
+}
+h4{
+	font-size: 1.6rem;
+}
+
+
+
+@media (max-width: 768px){
+	background-color: lightblue ;
+}
+
+
+@media (max-width: 500px){
+	background-color: lightseagreen;
+}
 }
 
 
 .container{
-	width: 80%;
-	margin: 3rem auto;
+// border: 1px solid red !important;
+
+width: 80%;
+margin: 3rem auto;
+display: flex;
+flex-flow: row nowrap;
+font-size: 1.6rem;
+
+@media (max-width: 500px){
+	font-size: 1.4rem;
+}
+}
+
+
+.top(){
+height: 200px;
+padding-bottom: 10%;
+}
+
+
+
+
+.sideBar{
+	// border: 1px solid blue !important;
+	width: 25%;
+	padding: 3% 3%;
+	background-color: @mainColor;
+	color: @subColor;
 	display: flex;
 	flex-flow: column nowrap;
-	font-size: 1.6rem;
 
-	@media (max-width: 500px){
-		font-size: 1.4rem;
+	a{		
+		color: @subColor;
+		font-family: @pFont;
+		text-decoration: none;
+	}
+
+	
+
+	.sideTop{
+		// border: 1px solid red !important;
+		display: flex;
+		justify-content: center;
+		
+		.top();	
+		
+		
+		
+		.contact{
+				width: 100%;
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: flex-start;
+			}
 	}
 }
 
-header{		
-	
-	width: 100%;	
+.divIcons{
 	display: flex;
-	flex-flow: column nowrap;
 	justify-content: space-around;
-	align-items: center;
-	
-	.navContainer{
-		
-		width: 60%;
-		padding: 1% 1%;
-		
-		
-		nav{		
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: space-between;
-			text-align: center;
-			align-items: center;
-		}
-	}
-
-	.headerContent{
-
-		display: flex;
-		flex-flow: row nowrap;
-		width: 100%;
-		align-items: center;
-		background-color: @mainColor;
-
-		// border: 1px solid red;
-
-
-		.headerPic{
-			// border: 1px solid blue;
-			width: 30%;
-			display: flex;
-			justify-content: center;
-			padding: 2% 2%;
-			
-			img{
-				max-width: 50%;	
-				border-radius: 100%;				
-			}
-		}
-		
-		.personalInfo{	
-			// border: 1px solid blue;
-			width: 70%;
-			color: @subColor;
-
-			padding: 3% 3%;
-			display: flex;
-			flex-flow: row nowrap;
-			// justify-content: center;
-
-
-			.name{
-				width: 50%;
-				display: flex;
-				// justify-content: center;
-				align-items: center;
-			}
-
-			.headerContact{
-				width: 50%;
-				display: flex;
-				flex-direction: column;
-				align-items: flex-end;
-			}
-		}
-	}	
-
-	
 }
 
 .content{
-	width: 100%;
+	// border: 1px solid blue !important;
+	width: 75%;
+	padding: 3% 3%;
+	background-color: @subColor;
+	color: @mainColor;
 	display: flex;
-	flex-flow: row nowrap;
-	// border: 1px solid red !important;
+	flex-flow: column nowrap;
 
-	.sideContent{		
-		width: 30%;
-		padding: 3% 3%;
-		background-color: @mainColor;
-		color: @subColor;
-		display: flex;
-		flex-flow: column nowrap;
-	}
-
-	.mainContent{
-		width: 70%;
-		padding: 3% 3%;
-		background-color: @subColor;
+	a{
 		color: @mainColor;
+		font-family: @pFont;
+		text-decoration: none;
+	}
+
+	a:hover{
+		color: @subColor;
+		background-color: @mainColor;
+		font-family: @pFont;
+	}
+
+	.contentTop{
+		// border: 1px solid red !important;
 		display: flex;
 		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		
+
+
+		.top();
+
+
+		.navContainer{
+			// border: 1px solid blue !important;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			
+
+
+
+			nav{
+				display: flex;
+				width: 100%;
+				justify-content: space-around;
+			}
+		}
+
+			
+		
 	}
+	
 }
+
+
+
+
 
 
 
