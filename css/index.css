@@ -170,30 +170,57 @@ body h5,
 body h6 {
   font-family: 'Montserrat', sans-serif;
 }
-body p {
+body p,
+body ul {
   font-family: 'Playfair Display', sans-serif;
   font-size: 1.6rem;
+}
+@media (max-width: 800px) {
+  body p,
+  body ul {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 500px) {
+  body p,
+  body ul {
+    font-size: 1.2rem;
+  }
+}
+body ul {
+  list-style: disc;
+  list-style-position: inside;
 }
 body h1 {
   font-size: 5rem;
 }
+@media (max-width: 500px) {
+  body h1 {
+    font-size: 3rem;
+  }
+}
 body h2 {
   font-size: 2.5rem;
+}
+@media (max-width: 500px) {
+  body h2 {
+    font-size: 2rem;
+  }
 }
 body h3 {
   font-size: 2rem;
 }
+@media (max-width: 500px) {
+  body h3 {
+    font-size: 1.6rem;
+  }
+}
 body h4 {
   font-size: 1.6rem;
 }
-@media (max-width: 768px) {
-  body {
-    background-color: lightblue ;
-  }
-}
 @media (max-width: 500px) {
-  body {
-    background-color: lightseagreen;
+  body h4 {
+    font-size: 1.4rem;
   }
 }
 .container {
@@ -205,7 +232,15 @@ body h4 {
 }
 @media (max-width: 500px) {
   .container {
-    font-size: 1.4rem;
+    flex-flow: column-reverse nowrap;
+    margin: 2rem auto;
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    margin: 2rem auto;
+    width: 90%;
   }
 }
 .sideBar {
@@ -215,6 +250,11 @@ body h4 {
   color: #c0c0c0;
   display: flex;
   flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  .sideBar {
+    width: 100%;
+  }
 }
 .sideBar a {
   color: #c0c0c0;
@@ -227,15 +267,21 @@ body h4 {
   height: 200px;
   padding-bottom: 10%;
 }
+@media (max-width: 500px) {
+  .sideBar .sideTop {
+    height: 100%;
+  }
+}
 .sideBar .sideTop .contact {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
 }
-.divIcons {
-  display: flex;
-  justify-content: space-around;
+@media (max-width: 500px) {
+  .sideBar .sideTop .contact {
+    align-items: center;
+  }
 }
 .content {
   width: 75%;
@@ -245,10 +291,20 @@ body h4 {
   display: flex;
   flex-flow: column nowrap;
 }
+@media (max-width: 500px) {
+  .content {
+    width: 100%;
+  }
+}
 .content a {
   color: #3d3d3d;
   font-family: 'Playfair Display', sans-serif;
   text-decoration: none;
+}
+@media (max-width: 500px) {
+  .content a {
+    font-size: 1.2rem;
+  }
 }
 .content a:hover {
   color: #c0c0c0;
@@ -263,6 +319,11 @@ body h4 {
   height: 200px;
   padding-bottom: 10%;
 }
+@media (max-width: 500px) {
+  .content .contentTop {
+    height: 100%;
+  }
+}
 .content .contentTop .navContainer {
   width: 100%;
   display: flex;
@@ -271,5 +332,21 @@ body h4 {
 .content .contentTop .navContainer nav {
   display: flex;
   width: 100%;
+  justify-content: space-around;
+}
+.content .mainContent {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.content .mainContent .skillsAndHobbies {
+  display: flex;
+  flex-flow: row wrap;
+}
+.content .mainContent .skillsAndHobbies #skills,
+.content .mainContent .skillsAndHobbies #hobbies {
+  width: 50%;
+}
+.divIcons {
+  display: flex;
   justify-content: space-around;
 }
