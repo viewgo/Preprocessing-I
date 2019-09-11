@@ -50,10 +50,191 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	// border: 1px dotted red !important;
 }
 
 html, body {
     height: 100%;
 }
+
+
+
+/************** WORK HERE *****************/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Playfair+Display&display=swap');
+
+@mainColor: rgb(61, 61, 61);
+@subColor: rgb(192, 192, 192);
+@headerFont: 'Montserrat', sans-serif;
+@pFont: 'Playfair Display', sans-serif;
+
+
+html{
+	font-size: 62.5%;
+	
+
+	hr{
+		width: 100%;
+		overflow: visible; /* For IE */
+		padding: 0;
+	}
+	
+		
+}
+
+body{
+	background-color: white;
+
+	line-height: 1.5;
+
+	h1,h2,h3,h4,h5,h6{
+		font-family: @headerFont;
+	}
+
+	p{
+		font-family: @pFont;
+		font-size: 1.6rem;
+	}
+
+	h1{
+		font-size: 5rem;
+	}
+	h2{
+		font-size: 2.5rem;
+	}
+	h3{
+		font-size: 2rem;
+	}
+	h4{
+		font-size: 1.6rem;
+	}
+
+
+	
+	@media (max-width: 768px){
+		background-color: lightblue ;
+	}
+	
+
+	@media (max-width: 500px){
+		background-color: lightseagreen;
+	}
+}
+
+
+.container{
+	width: 80%;
+	margin: 3rem auto;
+	display: flex;
+	flex-flow: column nowrap;
+	font-size: 1.6rem;
+
+	@media (max-width: 500px){
+		font-size: 1.4rem;
+	}
+}
+
+header{		
+	
+	width: 100%;	
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+	
+	.navContainer{
+		
+		width: 60%;
+		padding: 1% 1%;
+		
+		
+		nav{		
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			text-align: center;
+			align-items: center;
+		}
+	}
+
+	.headerContent{
+
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+		align-items: center;
+		background-color: @mainColor;
+
+		// border: 1px solid red;
+
+
+		.headerPic{
+			// border: 1px solid blue;
+			width: 30%;
+			display: flex;
+			justify-content: center;
+			padding: 2% 2%;
+			
+			img{
+				max-width: 50%;	
+				border-radius: 100%;				
+			}
+		}
+		
+		.personalInfo{	
+			// border: 1px solid blue;
+			width: 70%;
+			color: @subColor;
+
+			padding: 3% 3%;
+			display: flex;
+			flex-flow: row nowrap;
+			// justify-content: center;
+
+
+			.name{
+				width: 50%;
+				display: flex;
+				// justify-content: center;
+				align-items: center;
+			}
+
+			.headerContact{
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+		}
+	}	
+
+	
+}
+
+.content{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	// border: 1px solid red !important;
+
+	.sideContent{		
+		width: 30%;
+		padding: 3% 3%;
+		background-color: @mainColor;
+		color: @subColor;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	.mainContent{
+		width: 70%;
+		padding: 3% 3%;
+		background-color: @subColor;
+		color: @mainColor;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+}
+
+
 
