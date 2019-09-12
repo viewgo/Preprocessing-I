@@ -241,6 +241,12 @@ body h4 {
     width: 80%;
   }
 }
+@media (max-width: 500px) {
+  .bgContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .container {
   width: 100%;
   padding: 2% 2%;
